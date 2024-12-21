@@ -1,0 +1,619 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c; /* Header background */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold; /* Logo color */
+}
+
+nav button {
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: #FFCC00; /* Button background */
+    border: none;
+    color: white; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+nav button:hover {
+    background-color: #ffb300; 
+    text-decoration: none;
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    height: 800px; /
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Image takes full width */
+    height: 100%; /* Image takes full height */
+    object-fit: cover; /* Cover the slide area */
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.info h2 {
+    font-size: 28px; /* Movie title size */
+    margin: 0;
+}
+
+.info p {
+    font-size: 12px; /* Tagline size */
+    margin: 5px 0;
+}
+
+.info button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #FFCC00; /* Button background */
+    border: none;
+    color: white; /* Button text color */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.info button:hover {
+    background-color: #ffb300; /* Hover effect for buttons */
+}
+
+/* Slider Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none;
+    color: white; /* Button text color */
+    font-size: 30px; /* Control button size */
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%; /* Circular buttons */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.controls button:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+/* Movie Listings Styles */
+.movie-listings {
+    padding: 20px;
+}
+
+.movie-listings h2 {
+    font-size: 24px; /* Section title size */
+    margin-top: 20px;
+}
+
+.movie-row {
+    display: flex;
+    flex-wrap: wrap; /* Wrap movies to the next line */
+    gap: 20px; /* Space between movies */
+}
+
+.movie {
+    flex: 1 0 150px; /* Flexbox for responsive layout */
+    text-align: center; /* Center text */
+}
+
+.movie img {
+    width: 100%; /* Full width for thumbnails */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.movie h3 {
+    font-size: 18px; /* Movie name size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.movie button {
+    padding: 8px 12px;
+    background-color: #ffcc00; /* Button background */
+    border: none;
+    color: white; /* Button text color */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.movie button:hover {
+    background-color: #ffb300; /* Hover effect for buttons */
+}
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav button {
+        margin-top: 10px; /* Add space between buttons */
+        width: 100%; /* Full width for buttons */
+    }
+
+    .hero-slider {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .info h2 {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .info p {
+        font-size: 16px; /* Smaller tagline size */
+    }
+
+    .controls button {
+        font-size: 24px; /* Smaller control button size */
+    }
+
+    .movie-row {
+        flex-direction: column; /* Stack movies vertically */
+        align-items: center; /* Center movies */
+    }
+
+    .movie {
+        flex: 1 0 90%; /* Full width for movie thumbnails */
+    }
+}
+
+@media (max-width: 480px) {
+    .info h2 {
+        font-size: 20px; /* Further reduce title size */
+    }
+
+    .info p {
+        font-size: 14px; /* Further reduce tagline size */
+    }
+
+    .movie h3 {
+        font-size: 16px; /* Smaller movie name size */
+    }
+
+    .movie button {
+        padding: 6px 10px; /* Smaller button padding */
+    }
+}
+
+.container {
+    color: black;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    text-align: center;
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.screen {
+    background-color: #333; /* Dark screen color */
+    color: white; /* White text for contrast */
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 24px;
+    width: 80%; /* Responsive width */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px; /* Rounded corners for the screen */
+    text-align: center;
+}
+
+/* Seats Styles */
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #28a745; /* Green for available seats */
+    border: 1px solid #333; /* Dark border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.seat.selected {
+    background-color: #ffc107; /* Yellow for selected seats */
+}
+
+.seat.occupied {
+    background-color: #dc3545; /* Red for occupied seats */
+    cursor: not-allowed; /* Not allowed cursor for occupied seats */
+}
+
+/* Selected Seats Styles */
+.selected-seats {
+    margin-top: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+#selected-seats-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#selected-seats-list li {
+    background-color: #e9ecef; /* Light gray for list items */
+    margin: 5px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+}
+
+/* Button Styles */
+#confirm-button {
+    background-color: #FFCC00; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 14px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+    text-decoration: none;
+}
+
+#confirm-button:hover {
+    background-color: #ffb300; /* Darker shade on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.confirm-button {
+    background-color: #FFCC00;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.confirm-button:hover {
+    background-color: #ffb300;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #1c1c1c; /* Footer background color */
+    padding: 10px 15px; /* Reduced padding for a smaller footer height */
+    color: #ffffff; /* White text color */
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    max-width: 1300px; /* Maximum width for the footer content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-left {
+    text-align: left; /* Left align text */
+}
+
+.footer-left h3 {
+    font-size: 18px; /* Size for the About Us heading */
+    margin-bottom: 5px; /* Space below the heading */
+    margin-top: 5px;
+}
+
+.footer-left button {
+    padding: 5px 10px; /* Padding for the button */
+    border: none; /* No border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-logo {
+    margin-left: auto; /* Push logo to the right */
+}
+
+.footer-content p {
+    text-align: center; /* Center align copyright text */
+    margin-top: 5px; /* Space above copyright line */
+    font-size: 10px; /* Font size for copyright */
+}
+
+/* Responsive Styles for Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .footer-left h2 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .footer-left button {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-top: 5px; /* Space between buttons */
+        text-decoration: none;
+    }
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark background */
+    color: #ffffff; /* White text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.wrapper {
+    flex: 1; /* Allow the wrapper to grow and fill the space */
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c; /* Header background */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold; /* Logo color */
+}
+
+nav button {
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: #FFCC00; /* Button background */
+    border: none;
+    color: white; /* Button text color */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+nav button:hover {
+    background-color: #ffb300; /* Hover effect for buttons */
+    text-decoration: none;
+}
+
+/* Container Styles */
+.container {
+    color: black;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    text-align: left;
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    margin: 20px auto; /* Center the container */
+    
+}
+
+.movie-poster {
+    width: 100%; /* Full width for the movie poster */
+    border-radius: 5px; /* Rounded corners for the poster */
+}
+
+.container h2 {
+    font-size: 22px; /* Font size for movie title */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.container p {
+    font-size: 14px; /* Font size for movie details */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Button Styles */
+.container button {
+    padding: 10px 20px;
+    background-color: #FFCC00; /* Button background */
+    border: none;
+    color: white; /* Button text color */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.container button:hover {
+    background-color: #ffb300; /* Hover effect for buttons */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1c1c1c; /* Footer background color */
+    padding: 10px 15px; /* Reduced padding for a smaller footer height */
+    color: #ffffff; /* White text color */
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    max-width: 1300px; /* Maximum width for the footer content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-left {
+    text-align: left; /* Left align text */
+}
+
+.footer-left h3 {
+    font-size: 18px; /* Size for the About Us heading */
+    margin-bottom: 5px; /* Space below the heading */
+}
+
+.footer-logo {
+    margin-left: auto; /* Push logo to the right */
+}
+
+.footer-content p {
+    text-align: center; /* Center align copyright text */
+    margin-top: 5px; /* Space above copyright line */
+    font-size: 10px; /* Font size for copyright */
+}
+
+/* Responsive Styles for Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .footer-left h2 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .footer-left button {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-top: 5px; /* Space between buttons */
+        text-decoration: none;
+    }
+}
+.hero-slider {
+    position: relative;
+    overflow: hidden; /* Hide overflow for slides */
+}
+
+.slides {
+    display: flex; /* Use flexbox for horizontal layout */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    flex: 1 0 100%; /* Each slide takes full width */
+}
+
+.slide.active {
+    display: block; /* Show the active slide */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}

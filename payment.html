@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/browser logo.png" style="width:100px; height:100px;">
+    <title>Payment - CINEVERSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> <a href="index.html"> <img src="Assets/logo.png" style="width: 250px;"> </a></div>
+        <nav>
+            <button><a href="index.html">Home</a></button>
+            <button><a href="contact.html">Contact Us</a></button>
+        </nav>
+    </header>
+    <div class="container">
+        <form id="payment-form" action="payment form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name on Card</label>
+                <input type="text" id="name" name="c_name" required placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card_number" required placeholder="Enter Card Number">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" name="expiry" required placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required placeholder="CVV">
+            </div>
+            <div class="form-group">
+                <label for="amount">Total Amount</label>
+                <input type="text" id="amount" name="amount" value="100.00" readonly> <!-- Set a default amount for testing -->
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>About Us</h3>
+                <a href="contact.html" style="font-size: 12px;">Contact Us</a>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"> <img src="Assets/logo.png" style="width: 200px;"> </a>
+            </div>
+        </div>
+        <p style="font-size: 10px; text-align: center;">&copy; 2023 CINEVERSE. All rights reserved.</p>
+    </footer>
+    <script src="s3.js"></script>
+</body>
+</html>

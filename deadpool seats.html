@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/browser logo.png" style="width:100px; height:100px;">
+    <title>Seat Selection - CINEVERSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <header>
+            <div class="logo"> <a href="index.html"> <img src="Assets/logo.png" style="width: 250px;"> </a></div>
+            <nav>
+                <button><a href="index.html">Home</a></button>
+                <button><a href="contact.html">Contact Us</a></button>
+            </nav>
+    </header>
+    
+    <div class="container">
+        <img src="Assets/deadpool wide.jpeg" alt="deadpool and Wolverine" class="movie-poster">
+        <h1 style="text-align: center;">Deadpool & Wolverine</h1>
+        <h3 style="text-align: center;">Choose Your Seats</h3>
+        <div class="screen">Screen</div>
+        <div class="seats">
+            <!-- Rows and seats will be generated dynamically with JavaScript -->
+        </div>
+        <button style="color: #000;"><b>Rs 1000/Per seat</b></button>
+        <div class="seats"></div>
+        <ul id="selected-seats-list"></ul>
+        <div id="total-price" style="margin-bottom:10px;">Total Price: <strong>Rs 0</strong></div>
+        <button id="confirm-button">Confirm Selection</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>About Us</h3>
+                <a href="contact.html" style="font-size: 12px;">Contact Us</a>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"> <img src="Assets/logo.png" style="width: 200px;"> </a>
+            </div>
+        </div>
+        <p style="font-size: 10px; text-align: center;">&copy; 2023 CINEVERSE. All rights reserved.</p>
+    </footer>
+    <script src="script2.js"></script>
+</body>
+</html>
